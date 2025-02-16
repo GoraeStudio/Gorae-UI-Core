@@ -5,7 +5,7 @@ const Home = () => {
     return <div style={{ width: "100%" }}>
         <div style={{ width: "100%", gap: "20px", display: "flex", flexDirection: "column"}}>
 
-<div style={{display:"flex",flexDirection:"column",gap:"20px", background: "linear-gradient(180deg, #654AFF 0%, #476EE3 54%, #045EE7 100%)", padding:"120px 24px" }}>
+<div style={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",gap:"20px", background: "url(../../public/img/main.png)", backgroundSize: "cover", backgroundPosition: "left", backgroundRepeat: "no-repeat", height:"100vh" }}>
             <div style={{color:"white"}}>welcome to gorae ui</div>
             <div>
                 <h2 style={{ fontSize: "48px", fontWeight: "600", color:"white" }}>GORAE UI DESIGN SYSTEM</h2>
