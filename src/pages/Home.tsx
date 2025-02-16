@@ -3,6 +3,7 @@ import "../assets/css/gridStyles.css";
 import Panel from "../components/Panel";
 import RouteBar from "../components/RouteBar";
 import BusInfoUnit from "../components/BusInfoUnit";
+import Button from "../components/\bButton";
 const Home = () => {
     return <div style={{ width: "100%" }}>
         <div style={{ width: "100%", gap: "20px", display: "flex", flexDirection: "column"}}>
@@ -57,9 +58,13 @@ const Home = () => {
                     } />
                 </div>
                 <div style={{width:"100%",height:"100%"}}>
-                <StyleCard title="select" element={<select><option>sample</option></select>} />
+                <StyleCard title="select" element={
+                    <div style={{display:"flex",flexDirection:"column",gap:"12px",padding:"12px",backgroundColor:"white"}}>
+                    <Button variant="primary" size="small">sample</Button> <Button variant="default" size="small">sample</Button> <Button variant="primary" size="medium">sample</Button> 
+                    </div>
+                    } />
                 </div>
-                <div style={{width:"100%",height:"100%"}}>
+                <div style={{width:"100%",height:"100%"}}>  
                 <StyleCard title="select" element={<select><option>sample</option></select>} />
                 </div>
                 <div style={{width:"100%",height:"100%"}}>
