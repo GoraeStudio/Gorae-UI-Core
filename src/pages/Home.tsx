@@ -1,6 +1,8 @@
 import StyleCard from "../components/StyleCard";
 import "../assets/css/gridStyles.css";
-
+import Panel from "../components/Panel";
+import RouteBar from "../components/RouteBar";
+import BusInfoUnit from "../components/BusInfoUnit";
 const Home = () => {
     return <div style={{ width: "100%" }}>
         <div style={{ width: "100%", gap: "20px", display: "flex", flexDirection: "column"}}>
@@ -19,16 +21,40 @@ const Home = () => {
             </div>
             <div className="grid-container" style={{padding:"80px 0", display:"grid", gridTemplateColumns:"repeat(2,1fr)", gap:"12px", alignSelf:"center", width:"100%"}}>
                 <div style={{width:"100%",height:"100%"}}>
-                <StyleCard title="button" element={<button>sample</button>} />
+                <StyleCard title="panel" element={
+                    <div style={{width:"200px"}}>
+                    <Panel header="||||||||||||||" >
+                    <span style={{fontSize:"14px",padding:"0 16px"}}>This is Home</span>
+                    <span style={{fontSize:"14px",padding:"0 16px"}}>This is Home</span>
+                    </Panel>
+                    </div>
+                    } />
                 </div>
                 <div style={{width:"100%",height:"100%"}}>
-                <StyleCard title="div" element={<div>sample</div>} />
+                <StyleCard title="routebar" element={
+                    <div style={{width:"200px"}}>
+                    <RouteBar />
+                    </div>
+                    } />
                 </div>
                 <div style={{width:"100%",height:"100%"}}>
-                <StyleCard title="select" element={<select><option>sample</option></select>} />
+            
+                <StyleCard title="businfo" element={
+                    
+                    <div style={{width:"300px"}}>
+                    <BusInfoUnit busNumber="720-2" busStation="죽전 평화의 광장" busTime="10:00" lastStation="3전" />
+                    </div>
+                    } />
                 </div>
                 <div style={{width:"100%",height:"100%"}}>
-                <StyleCard title="select" element={<select><option>sample</option></select>} />
+                <StyleCard title="select" element={
+                    <div style={{width:"300px"}}>
+                    <Panel header="죽전역">
+                    <BusInfoUnit busNumber="720-2" busStation="죽전 평화의 광장" busTime="10:00" lastStation="3전" />
+                    <BusInfoUnit busNumber="720-2" busStation="죽전 평화의 광장" busTime="10:00" lastStation="3전" />
+                    </Panel>
+                    </div>
+                    } />
                 </div>
                 <div style={{width:"100%",height:"100%"}}>
                 <StyleCard title="select" element={<select><option>sample</option></select>} />
