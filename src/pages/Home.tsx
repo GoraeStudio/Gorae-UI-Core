@@ -10,14 +10,16 @@ const Home = () => {
 
 <div style={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",gap:"20px", background: "url(/img/main.png)", backgroundSize: "cover", backgroundPosition: "left", backgroundRepeat: "no-repeat", height:"100vh" }}>
             <div style={{color:"white"}}>welcome to gorae ui</div>
-            <div>
-                <h2 style={{ fontSize: "48px", fontWeight: "600", color:"white" }}>GORAE UI DESIGN SYSTEM</h2>
+            <div style={{display:"flex",flexDirection:"column",gap:"12px", justifyContent:"center", alignItems:"center"}}>
+                <h2 style={{ fontSize: "48px", fontWeight: "600", color:"white" }}>GORAE UI</h2>
                 <p style={{ fontSize: "20px", fontWeight: "normal", padding: "6px 0",color:"white" }}>단버스의 맛있는 디자인시스템</p>
             </div>
             <div  style={{ display: "flex", flexDirection: "row", gap: "12px" }}>
-                <button  className="home-button" style={{ backgroundColor: "#E6EDFF", color: "#0133CC", padding: "8px 16px", border: "none", borderRadius: "4px", cursor: "pointer" }}>Get Started</button>
-                <button className="home-button" style={{ backgroundColor: "#008CBA", color: "white", padding: "10px 20px", border: "none", borderRadius: "4px", cursor: "pointer" }}>npm i @gorae-ui/react</button>
-                <button className="home-button" style={{ backgroundColor: "#f44336", color: "white", padding: "10px 20px", border: "none", borderRadius: "4px", cursor: "pointer" }}>npm i @gorae-ui/vue</button>
+                <div style={{display:"flex",flexDirection:"column",gap:"12px"}}>
+                <Button variant="primary" size="small">Get Started</Button>
+                <Button variant="default" size="small">npm i @gorae-ui/react</Button>
+                <Button variant="default" size="small">npm i @gorae-ui/vue</Button>
+                </div>
             </div>
             </div>
             <div className="grid-container" style={{padding:"80px 0", display:"grid", gridTemplateColumns:"repeat(2,1fr)", gap:"12px", alignSelf:"center", width:"100%"}}>
