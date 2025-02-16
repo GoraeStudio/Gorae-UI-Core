@@ -5,7 +5,6 @@
     "lib": ["ES2023"],
     "module": "ESNext",
     "skipLibCheck": true,
-    "types":["svg.d.ts"],
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -21,5 +20,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["vite.config.ts","svg.d.ts"]
+  "include": ["vite.config.ts"]
 }

@@ -1,4 +1,4 @@
-import  ArrowDownSvg from "../../public/svg/arrow-down.svg?react"
+import  ArrowDownSvg from "../assets/svg/arrow-down.svg?react"
 import { useState } from "react"
 const BusInfoUnit = ({busNumber,busStation,busTime,lastStation}:{busNumber:string,busStation:string,busTime:string,lastStation:string}) => {
     const [isOpen,setIsOpen] = useState(false)
