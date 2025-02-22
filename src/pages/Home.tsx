@@ -22,7 +22,7 @@ const Home = () => {
                 </div>
             </div>
             </div>
-            <div className="grid-container" style={{padding:"80px 0", display:"grid", gridTemplateColumns:"repeat(2,1fr)", gap:"12px", alignSelf:"center", width:"100%"}}>
+            <div className="grid-container" style={{padding:"80px 16px", display:"grid", gridTemplateColumns:"repeat(2,1fr)", alignSelf:"center", width:"100%"}}>
                 <div style={{width:"100%",height:"100%"}}>
                 <StyleCard title="panel" element={
                     <div style={{width:"200px"}}>
@@ -44,7 +44,7 @@ const Home = () => {
             
                 <StyleCard title="businfo" element={
                     
-                    <div style={{width:"300px"}}>
+                    <div style={{width:"200px"}}>
                     <BusInfoUnit busNumber="720-2" busStation="죽전 평화의 광장" busTime="10:00" lastStation="3전" />
                     </div>
                     } />

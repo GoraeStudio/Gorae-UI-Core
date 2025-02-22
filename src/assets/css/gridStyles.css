@@ -8,6 +8,8 @@
     @media (min-width: 1200px) {
         grid-template-columns: repeat(3,1fr) !important;
     }
+    gap: 24px;
+    max-width: 1200px;
 } 
 
 .home-button {
