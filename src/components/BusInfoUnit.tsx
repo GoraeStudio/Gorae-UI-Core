@@ -1,12 +1,20 @@
 import  ArrowDownSvg from "../assets/svg/arrow-down.svg?react"
 import { useState } from "react"
-const BusInfoUnit = ({busNumber,busStation,busTime,lastStation}:{busNumber:string,busStation:string,busTime:string,lastStation:string}) => {
-    const [isOpen,setIsOpen] = useState(false)
+interface BusInfoUnitProps {
+    busNumber: string
+    busStation: string
+    busTime: string
+    lastStation: string
+    initialOpen?: boolean
+    busColor?:string
+}
+const BusInfoUnit = ({busNumber,busStation,busTime,lastStation,initialOpen,busColor}:BusInfoUnitProps) => {
+    const [isOpen,setIsOpen] = useState(initialOpen || false)
     return (
         <div style={{display:"flex",flexDirection:"column",gap:"8px"}}>
     <div style={{display:"flex",flexDirection:"row",alignItems:"center",backgroundColor:"white",padding:"0 16px",borderRadius:"6px",width:"100%",justifyContent:"space-between"}}>
 <div style={{display:"flex",flexDirection:"column",gap:"4px"}}>
-    <span style={{fontSize:"18px",fontWeight:"600",color:"#222222"}}>{busNumber}</span>
+    <span style={{fontSize:"18px",fontWeight:"600",color: busColor ? busColor : "#222222"}}>{busNumber}</span>
     <span style={{fontSize:"14px",color:"#707070"}}>{busStation}</span>
 </div>
 <div style={{display:"flex",flexDirection:"row",alignItems:"center",gap:"16px"}}>
@@ -23,7 +31,8 @@ const BusInfoUnit = ({busNumber,busStation,busTime,lastStation}:{busNumber:strin
 
 
 <div style={{display:"flex",flexDirection:"row",justifyContent:"space-between",alignItems:"center",backgroundColor:"white",padding:"0 16px",borderRadius:"6px",width:"100%"}}>
-    <button>Opened!</button>
+    {/* <button>Opened!</button> */}
+    <div></div>{/* 임시 블럭 */}
     <div style={{display:"flex",flexDirection:"column",gap:"4px"}}>
     <span style={{paddingRight:"24px",fontSize:"14px",color:"#707070"}}>26분 전</span>
     <span style={{paddingRight:"24px",fontSize:"14px",color:"#707070"}}>52분 후</span>

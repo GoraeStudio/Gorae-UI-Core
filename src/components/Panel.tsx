@@ -1,10 +1,39 @@
-const Panel = ({header,children}:{header:string,children:React.ReactNode}) => {
-    return <div style={{padding:"16px 0",display:"flex",flexDirection:"column",backgroundColor:"white",gap:"24px"}}>
+import { useState } from "react"
+import  ArrowDownSvg from "../assets/svg/arrow-down.svg?react"
+
+interface PanelProps {
+    header: string
+    subHeader?: string
+    mainContent: React.ReactNode
+    initialShowHiddenContent?: boolean
+    hiddenContentShowLabel? :string
+    hiddenContent?: React.ReactNode
+}
+
+const Panel = ({header,subHeader,mainContent,hiddenContent,initialShowHiddenContent,hiddenContentShowLabel}:PanelProps) => {
+
+    const [isOpen,setIsOpen] = useState(initialShowHiddenContent || false)
+
+    return <div style={{padding:"16px 0",display:"flex",flexDirection:"column",backgroundColor:"white",gap:"24px",borderRadius:"4px"}}>
         <div style={{display:"flex",flexDirection:"column",gap:"8px"}}>
             <span style={{padding:"0 16px",fontSize:"16px",fontWeight:"600",color:"#707070"}}>{header}</span>
-            <span style={{padding:"0 16px",fontSize:"12px",color:"#707070"}}>|||||||||||</span>
+            {subHeader && <span style={{padding:"0 16px",fontSize:"12px",color:"#707070"}}>{subHeader}</span>}  
         </div>
-        {children}
+        {mainContent}
+        {(hiddenContent && hiddenContentShowLabel) &&
+        <div style={{padding:"0 12px", width:"100%"}}>
+        <button style={{padding:"12px 0px",fontSize:"12px",color:"#707070",border:"none",cursor:"pointer",borderTop:"2px solid #F6F6F6",backgroundColor:"transparent",width:"100%"}} onClick={() => setIsOpen(!isOpen)}>{hiddenContentShowLabel}
+
+            {
+                isOpen && <ArrowDownSvg style={{transform:"rotate(180deg)",marginLeft:"4px"}} />
+         
+            }
+            {       !isOpen && <ArrowDownSvg style={{marginLeft:"4px"}} />}
+        </button>
+        </div>
+        }
+        {isOpen && hiddenContent}
+
     </div>
 }
 
