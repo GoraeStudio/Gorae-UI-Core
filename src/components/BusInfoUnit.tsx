@@ -1,4 +1,4 @@
-import  ArrowDownSvg from "../assets/svg/arrow-down.svg?react"
+import  ArrowDownSvg from "../assets/svg/arrow-down.svg"
 import { useState } from "react"
 interface BusInfoUnitProps {
     busNumber: string

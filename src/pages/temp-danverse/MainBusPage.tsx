@@ -11,7 +11,7 @@ const MainBusPage = () => {
     useEffect(() => {
         setTimeout(() => {
             setData(busData)
-        }, 2000)
+        }, 1000)
     }, [])
 
     const busData = [
