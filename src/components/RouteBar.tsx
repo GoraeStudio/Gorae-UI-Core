@@ -1,4 +1,3 @@
-import { Link } from "react-router"
 import ArrowDownSvg from "../assets/svg/arrow-down.svg?react"
 
 interface RouteBarProps {
@@ -7,9 +6,9 @@ interface RouteBarProps {
 }
 
 const RouteBar = ({title,path}:RouteBarProps) => {
-    return <div style={{padding:"16px",display:"flex",flexDirection:"row",justifyContent:"space-between",alignItems:"center",backgroundColor:"white",borderRadius:"6px",width:"100%"}}>
-            <span style={{fontSize:"14px"}}>{title}</span>
-            {path && <Link to={path}><ArrowDownSvg style={{rotate:"270deg"}} /></Link>}
+    return <div style={{padding:"16px",display:"flex",flexDirection:"row",justifyContent:"space-between",alignItems:"center",background: "linear-gradient(to right, rgba(0, 51, 204, 0.7) 0%, rgba(81, 0, 255, 0.7) 100%)",borderRadius:"6px",width:"100%"}}>
+            <span style={{fontSize:"14px",color:"white"}}>{title}</span>
+            {path && <span><ArrowDownSvg style={{rotate:"270deg",color:"white"}} /></span>}
         </div>
 }
 
