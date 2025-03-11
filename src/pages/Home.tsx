@@ -3,7 +3,7 @@ import "../assets/css/gridStyles.css";
 import Panel from "../components/Panel";
 import RouteBar from "../components/RouteBar";
 import BusInfoUnit from "../components/BusInfoUnit";
-import Button from "../components/\bButton";
+import Button from "../components/Button";
 import Header from "../components/Header";
 
 const Home = () => {

@@ -8,15 +8,16 @@ interface PanelProps {
     initialShowHiddenContent?: boolean
     hiddenContentShowLabel? :string
     hiddenContent?: React.ReactNode
+    headerMute?: boolean
 }
 
-const Panel = ({header,subHeader,mainContent,hiddenContent,initialShowHiddenContent,hiddenContentShowLabel}:PanelProps) => {
+const Panel = ({header,subHeader,mainContent,hiddenContent,initialShowHiddenContent,hiddenContentShowLabel,headerMute}:PanelProps) => {
 
     const [isOpen,setIsOpen] = useState(initialShowHiddenContent || false)
 
     return <div style={{padding:"16px 0",display:"flex",flexDirection:"column",backgroundColor:"white",gap:"24px",borderRadius:"4px"}}>
         <div style={{display:"flex",flexDirection:"column",gap:"8px"}}>
-            <span style={{padding:"0 16px",fontSize:"16px",fontWeight:"600",color:"#707070"}}>{header}</span>
+            <span style={{padding:"0 16px",fontSize:"16px",fontWeight:"600",color:headerMute ? "#707070" : "#222222"}}>{header}</span>
             {subHeader && <span style={{padding:"0 16px",fontSize:"12px",color:"#707070"}}>{subHeader}</span>}  
         </div>
         {mainContent}

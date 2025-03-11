@@ -2,8 +2,10 @@ interface ButtonProps {
     variant: "primary" | "default"
     size: "small" | "medium" | "large"
     children: React.ReactNode
+    onClick?: () => void
+    width?: string
 }
-const Button = ({variant="default",size="small",children}:ButtonProps) => {
+const Button = ({variant="default",size="small",children,onClick,width}:ButtonProps) => {
     const styles = {
         primary: {
             color: "#0133CB",
@@ -43,7 +45,7 @@ const Button = ({variant="default",size="small",children}:ButtonProps) => {
         ...styles.sizes[size]
     };
 
-    return <button style={{color, padding, borderRadius: "4px", backgroundColor, fontSize, fontWeight, border: "none"}}>{children}</button>
+    return <button style={{color, padding, borderRadius: "4px", backgroundColor, fontSize, fontWeight, border: "none", width: width ?? "" }} onClick={onClick}>{children}</button>
 }
 
 export default Button
