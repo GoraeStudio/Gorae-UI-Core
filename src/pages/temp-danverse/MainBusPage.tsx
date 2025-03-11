@@ -1,3 +1,4 @@
+"use client"
 import RouteBar from "../../components/RouteBar";
 import Panel from "../../components/Panel";
 import BusInfoUnit from "../../components/BusInfoUnit";
